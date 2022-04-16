@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: monero-payer
+    env_file: .env
+    restart: unless-stopped
+    hostname: api
+    command: "gunicorn -k uvicorn.workers.UvicornWorker -c /app/gunicorn/relative.py app.main:app"
