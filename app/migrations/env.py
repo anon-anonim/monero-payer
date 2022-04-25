@@ -20,6 +20,9 @@ if config.config_file_name is not None:
 # target_metadata = mymodel.Base.metadata
 target_metadata = None
 
+from settings import conf
+postgres_dsn = f"postgresql://{conf.postgres_user}:{conf.postgres_password}@{conf.postgres_host}:{conf.postgres_port}/{conf.postgres_db}"
+config.set_main_option('sqlalchemy.url', postgres_dsn)
 # other values from the config, defined by the needs of env.py,
 # can be acquired:
 # my_important_option = config.get_main_option("my_important_option")

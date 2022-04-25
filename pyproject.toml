@@ -11,6 +11,7 @@ monero = "^1.0"
 alembic = "^1.7.7"
 fastapi = "^0.75.0"
 uvicorn = {extras = ["standard"], version = "^0.17.6"}
+psycopg2-binary = "^2.9.3"
 
 [tool.poetry.dev-dependencies]
 
