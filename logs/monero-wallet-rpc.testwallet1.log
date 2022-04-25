@@ -1,0 +1,10 @@
+2022-04-16 16:50:11.904	    7fe9a9ea2780	INFO	logging	contrib/epee/src/mlog.cpp:273	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.ssl:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,stacktrace:INFO,logging:INFO,msgwriter:INFO
+2022-04-16 16:50:11.911	    7fe9a9ea2780	INFO	msgwriter	src/common/scoped_message_writer.h:102	Forking to background...
+2022-04-16 16:50:11.920	    7fe9a9ea2780	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:4241	Loading wallet...
+2022-04-16 16:50:11.929	    7fe9a9ea2780	INFO	global	contrib/epee/src/net_ssl.cpp:124	Generating SSL certificate
+2022-04-16 16:50:15.090	    7fe9a9ea2780	INFO	global	contrib/epee/src/net_ssl.cpp:124	Generating SSL certificate
+2022-04-16 16:50:19.312	    7fe9a9ea2780	WARNING	wallet.wallet2	src/wallet/wallet2.cpp:5246	Loaded wallet keys file, with public address: 9vUnTucAioDHD4ZqrFHXAgfLqrsC3LkZ6JFr5axBLhDiFMaHuEk33aqXimoZEMtQh5ibdYxcNSBw2hBZLAsCnuw4B4rBeZX
+2022-04-16 16:50:19.448	    7fe9a9ea2780	ERROR	wallet.mms	src/wallet/message_store.cpp:735	No message store file found: /monero/wallets/testwallet1.mms
+2022-04-16 16:50:19.506	    7fe9a9ea2780	INFO	global	contrib/epee/include/net/http_server_impl_base.h:78	Binding on 0.0.0.0:18083
+2022-04-16 16:50:19.507	    7fe9a9ea2780	INFO	global	contrib/epee/src/net_ssl.cpp:124	Generating SSL certificate
+2022-04-16 16:50:21.053	    7fe9a9ea2780	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:4294	Starting wallet RPC server

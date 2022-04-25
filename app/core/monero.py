@@ -8,7 +8,7 @@ log = logging.getLogger("monero-payer")
 
 async def get_address(pool: Pool):
     log.debug(f"{pool=}")
-    return "wallet address here"
+    return "Ще за докер?"
 
 
 async def check_transaction(

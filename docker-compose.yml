@@ -10,6 +10,19 @@ services:
       - postgres_data:/var/lib/postgresql/data
     restart: unless-stopped
 
+  testnet:
+    image: "libraventures/monero-testnet:0.14.1"
+    ports:
+      - "127.0.0.1:18082:18082"
+      - "127.0.0.1:28081:28081"
+      - "127.0.0.1:38081:38081"
+    volumes:
+      - './chains:/monero/blockchain'
+      - './wallets:/monero/wallets'
+      - './logs:/monero/logs'
+    hostname: monero-payer-testnet
+    restart: unless-stopped
+
 volumes:
   postgres_data:
 
