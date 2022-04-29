@@ -2,6 +2,8 @@ version: "3.7"
 
 services:
   postgres:
+    ports:
+      - ${POSTGRES_PORT}:5432
     image: postgres:11-alpine
     container_name: monero-payer-postgres
     hostname: monero-payer-postgres
@@ -9,7 +11,7 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
     restart: unless-stopped
-
+    
   testnet:
     image: "libraventures/monero-testnet:0.14.1"
     ports:

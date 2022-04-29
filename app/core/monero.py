@@ -33,7 +33,7 @@ async def check_transaction(
 
 
 async def get_wallet_transactions(
-    pool: Pool,
+    pool: Pool,зщуекн
     wallet_address: str,
 ):
     log.debug(f"{pool=}")
