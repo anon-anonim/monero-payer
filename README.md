@@ -9,3 +9,4 @@
 `docker-compose up -d` - запустить контейнер
 `poetry shell` - `C:\Proct\Monero_payer\app`
     `alembic upgrade head` - миграция БД
+`docker exec -it monero-payer-postgres psql -U postgres monero-payer` подключиться к БД
