@@ -15,12 +15,14 @@ async def get_address_route(pool: Pool = Depends(get_db_pool)):
 @router.get("/check_transaction")
 async def check_transaction_route(
     wallet_address: str,
+    transaction_id: str,
     amount: int,
     pool: Pool = Depends(get_db_pool)
 ):
     return await monero.check_transaction(
         pool,
         wallet_address,
+        transaction_id,
         amount,
     )
 
