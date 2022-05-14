@@ -16,10 +16,10 @@ from monero.wallet import Wallet
 
 from monero.backends.jsonrpc import JSONRPCWallet
 
-# async def cnct():
-#     conct = await asyncpg.connect('postgresql://postgres:postgres@localhost:5432/monero-payer')
-#     con=conct
-#     return con
+async def cnct():
+    conct = await asyncpg.connect('postgresql://postgres:postgres@localhost:5432/monero-payer')
+    con=conct
+    return con
     
 
 async def my_request(pool: Pool):

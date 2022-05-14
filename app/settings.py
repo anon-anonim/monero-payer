@@ -13,7 +13,7 @@ class Settings(BaseSettings):
     postgres_password: str = os.environ.get("POSTGRES_PASSWORD", "postgres")
     postgres_port: str = os.environ.get("POSTGRES_PORT", "5432")
     postgres_db: str = os.environ.get("POSTGRES_DB", "monero-payer")
-    postgres_sslmode: str = os.environ.get("POSTGRES_SSLMODE")
+    postgres_sslmode: str = os.environ.get("POSTGRES_SSLMODE", "disable")
 
     class Config:
         env_prefix = ""

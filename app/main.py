@@ -15,7 +15,7 @@ app = FastAPI()
 @app.on_event("startup")
 async def handle_startup():
     postgres_dsn = f"postgres://{conf.postgres_user}:{conf.postgres_password}@{conf.postgres_host}:{conf.postgres_port}/{conf.postgres_db}?sslmode={conf.postgres_sslmode}"
-    pool = asyncpg.create_pool(dsn=postgres_dsn)
+    pool = await asyncpg.create_pool(dsn=postgres_dsn)
     log.info(f"Connected to Postgres on {conf.postgres_host}:{conf.postgres_port}")
     app.extra["db"] = pool
 
