@@ -1,6 +1,7 @@
 import logging
 
 from asyncpg.pool import Pool
+from fastapi import HTTPException
 
 import asyncpg
 
@@ -45,11 +46,16 @@ async def check_transaction(
     wallet_address: str,
     transaction_id: str,
     amount: int,
-) -> bool:
+):
     log.debug(f"{pool=}")
     log.debug(f"{wallet_address=}")
     log.debug(f"{transaction_id=}")
-    return False
+    tipa_tranzakciya = {
+        'ok': True,
+        'amount': '123'
+    }
+    if amount != tipa_tranzakciya.get('amount'):
+        raise HTTPException(status_code=400, detail='huynu prislal')
 
 
 async def get_wallet_transactions(
